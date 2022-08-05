@@ -6,9 +6,11 @@ Sample object:
         sclass : "VI",
         rollno : 12 };*/
 
-let deleteValue=(student)=>{
-    delete student.rollno;
-    console.log(student);
+
+
+let deleteKey=(obj,key)=>{
+   delete obj[key];
+   console.log(obj);
 }
 
-deleteValue();
+deleteKey();

@@ -19,3 +19,7 @@ let  getKeys =(student)=>{
 }
 
 getKeys(student);
+
+let showKeys =(object)=>Object.keys(object);
+
+console.log(showKeys(student));
