@@ -22,11 +22,14 @@ var library = [
 let readingStatus=(library)=>{
 
     for (let key in library){
-        if(library[key].readingStatus === true){
-            console.log("I've already read the " + "'" +  library[key].title +"'" + " book, wich author is " + library[key].author)
-        } else {
-            console.log("I`m need to read the " +"'" + library[key].title+"'" + " book, wхich author is " + library[key].author)
+        if (library.hasOwnProperty(key)) {
+            if(library[key].readingStatus ){
+                console.log("I've already read the " + "'" +  library[key].title +"'" + " book, wich author is " + library[key].author)
+            } else {
+                console.log("I`m need to read the " +"'" + library[key].title+"'" + " book, which author is " + library[key].author)
+            }
         }
+
 
     }
 
