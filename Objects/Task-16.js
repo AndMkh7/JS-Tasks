@@ -6,7 +6,7 @@ return - {12: [{name: "aa"}, {name: "aaa"}], 22: [{name: "aaaa"}]}*/
 
 let people = [{name: "aa", age: 12}, {name: "aaa", age: 12},{name: "aaaa", age: 22},]
 
-function sortByAge(arr){
+function groupByAge(arr){
     let obj = {};
     for (let i = 0 ; i < arr.length; i ++){
 
@@ -19,6 +19,6 @@ function sortByAge(arr){
     return obj;
 }
 
-console.log(sortByAge(people));
+console.log(groupByAge(people));
 
 
