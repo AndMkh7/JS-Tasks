@@ -20,3 +20,17 @@ function groupByName(arr){
 }
 
 console.log(groupByName(people));
+
+
+
+
+function groupByFieldWithReduce(arr ,key  ){
+
+    return arr.reduce(function(obj, val){
+        (obj[val[key]] = obj[val[key]]??[]).push(val);
+        return obj;
+    },{}) ;
+
+}
+
+console.log(groupByFieldWithReduce(people, "name"));
