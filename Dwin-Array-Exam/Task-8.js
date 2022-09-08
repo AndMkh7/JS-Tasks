@@ -32,16 +32,10 @@ const characters = [
     },
 ];
 
-function isTeller(arr){
-    let heightObj = arr.map(function(obj){
-        return obj.height
+function isTeller(arr) {
+    return arr.some(function(obj) {
+        return  obj.height > 200;
     });
-    return heightObj.some((item)=>{
-        if(item > 200){
-            return true;
-        }
-
-    })
 }
 
 isTeller(arr);

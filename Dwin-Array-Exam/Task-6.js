@@ -34,17 +34,9 @@ const characters = [
 
 function getFemaleChar(arr){
 
-
-    let newArr =  arr.filter(function(obj){
-        return obj.gender === `male`
+    return  arr.filter(function(obj){
+        return obj.gender === `female`
     });
-
-    let femaleArr = newArr.reduce((acc,obj,ind)=>{
-
-        acc[ind] = obj.name;
-        return acc;
-    },[]);
-    return femaleArr;
 
 }
 getFemaleChar(arr);

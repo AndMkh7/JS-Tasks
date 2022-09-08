@@ -37,10 +37,7 @@ function sortByGender(arr){
         if (a.gender >  b.gender ){
             return 1
         }
-        if (a.gender < b.gender ){
-            return  - 1
-        }
-
+            return -1
     })
 }
 

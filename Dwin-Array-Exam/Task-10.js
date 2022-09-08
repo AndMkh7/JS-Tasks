@@ -13,16 +13,11 @@ Expected Output :
 
 const inputArr = [7, 9, 0, -2];
 
-function returnLastElements(arr , element  ){
-    let newArr =[];
+function returnLastElements(arr , element   ){
     if(!element){
-        newArr.push(arr[arr.length - 1])
-    } else if( element > arr.length){
-        newArr = arr ;
-    } else {
-        newArr = arr.slice(arr.length - element)
+        return arr[arr.length-1];
     }
-    return newArr
+    return arr.slice(arr.length - element);
 }
 
-returnLastElements(inputArr);
+returnLastElements(inputArr , 10 );
