@@ -32,21 +32,10 @@ const characters = [
     },
 ];
 
-function getFirstName(arr){
-    let result = [];
-   let arrNames =arr.map(function(obj){
-       return obj.name
-   }) ;
-
-   let splittedArr = [];
-   for(let i = 0 ; i < arrNames.length ; i++ ){
-       splitedArr.push(arrNames[i].split(" "));
-   }
-
-   for (let j = 0 ; j < splittedArr.length ; j++){
-       result.push(splittedArr[j][0]);
-   }
-
-return result ;
+function getFirstName(arr ){
+    return arr.reduce(function(aggr ,obj ){
+        aggr.push(obj.name);
+        return aggr;
+    },[])
 }
 getFirstName(characters);

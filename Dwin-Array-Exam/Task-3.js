@@ -2,9 +2,7 @@
 
 function getCharCount(arr){
 
-    return arr.map(function(obj){
-        return obj.name.length
-    }).reduce((acc, val) => acc + val , 0);
+    return arr.reduce((acc, obj) => acc + obj.name.length , 0);
 
 }
 getCharCount(arr);

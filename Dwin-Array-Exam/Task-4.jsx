@@ -1,7 +1,7 @@
 /* Given the following objects array , get the total number of characters
 by eye color (hint. a map of eye color to count) */
 
-const characters = [
+const arr = [
     {
         name: 'Luke Skywalker',
         height: '172',
@@ -29,16 +29,17 @@ const characters = [
         mass: '84',
         eye_color: 'blue',
         gender: 'male',
-
     },
 ];
-
-function getCountByColor(arr, eye_color) {
-    let newArr = arr.filter(function (obj) {
-        return eye_color === obj.eye_color
-    })
-    return newArr.reduce((acc, obj) => acc + obj.name.length , 0);
+function groupByEyeColor(arr ){
+    let obj = {};
+    for (let i = 0 ; i < arr.length; i ++){
+        if(obj.hasOwnProperty(arr[i].eye_color)){
+            obj[arr[i].eye_color] +=  arr[i].name.length
+        } else{
+            obj[arr[i].eye_color] = arr[i].name.length
+        }
+    }
+    return obj;
 }
-
-
-getCountByColor(characters, `blue`)
+console.log(groupByEyeColor(arr));
